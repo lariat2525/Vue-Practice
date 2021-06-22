@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <p>aaaddd</p>
+  <div>
+    {{msg}}
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js rkk'
+      msg: 'Gallery'
     }
   }
 }
