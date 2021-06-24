@@ -1,31 +1,28 @@
 <template>
-    <div>
-         <div>
-    {{msg}}
+      <div class="font-carib" id="titles">
+        {{msg}}
         </div>
-        <card></card>
-    </div>
 </template>
 
 <script>
-/* import card from './components/card'  */
-
 export default {
-  name: 'titles',
+  name: 'HelloWorld',
   data () {
     return {
-      msg: 'Portforio Gallerys'
+      msg: "Portfolio gallery"
     }
   }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-/* 
-@font-face {
-    font-family: 'IFC RAILROAD 2';
-    src: url('../assets/fonts/IFC RAILROAD 2.ttf') format('truetype');
-  } */
+.font-carib{
 
-
+  position: absolute;
+  font-family: 'Caribbean';
+  font-size:3.4vw;
+  color:rgba(243, 243, 243, 0.733);
+  letter-spacing:3px;
+}
 </style>

@@ -1,73 +1,68 @@
 <template>
-  <div id="app">
+  <div id="app" class="d-flex flex-column">
     <myheader></myheader>
-    <div class="contents">
-      <img class="contents-bg" src="./assets/bg-1.jpg">
-      <div class="titles-contents">
-         <router-view/>
+    <div class="contents d-flex flex-column">
+      <div class=titles-ps>
+      <titles></titles>
       </div>
-      <card></card>
+      <div class="contents-uni">
+      <router-view/>
+      </div>
     </div>
   </div>
 </template>
 
-<!-- <button class="btn btn-primary">test</button> -->
-<!-- <router-view/> -->
-
 <script>
 import myheader from './components/myheader'
-import card  from './components/card'
+import titles from './components/titles'
+
 
 export default {
   name: 'App',
   components: {
-    myheader,
-    card
-  },
+    myheader,titles
+  }
 }
+
 </script>
 
 <style>
+body{
+
+  width:100%;
+  max-width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image:url("./assets/bg-1.jpg")
+}
 #app {
-  font-family: 'IFC RAILROAD 2','Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Comic Sans MS', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: white;
-  display: flex;
-  flex-direction: column;
+  font-size:5rem;
+  color: black;
 }
 
-.contents{
+/* .contents{
 
-  position: relative;
-  top:20%;
-  bottom:0;
-  color:yellow;
-  display: flex;
-  flex-direction: column;
-}
-/* .contents p{
+  width:100%;
+  height:100vh;
+
+} ??? */
+.contents-bg{
 
   position: absolute;
-  top:0;
-  bottom:0;
-} */
-
-.contents-bg{
   width:100%;
   max-width: 100%;
   height: auto;
 }
 
-.titles-contents{
+.titles-ps{
 
-  position:absolute;
-  left:33%;
-  top:1%;
-  font-size:3.5rem;
-  color:rgba(243, 243, 243, 0.733);
-  letter-spacing:3px;
-  text-align:none;
+  margin:2.2% 0 8% 29%;
+}
+.contents-un{
+
+  position: absolute;
 }
 </style>
